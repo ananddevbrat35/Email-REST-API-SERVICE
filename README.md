@@ -9,7 +9,7 @@ It is server side service for email with OAuth 2.0 and GMAIL REST API using Node
 5. The server will be listening on port 8080( http://localhost:8080 ).   
 # Description of Endpoints:
 ### /auth
-Endpoint to initiate authorization using OAuth 2.0. This endpoint will create credentials that would be used for sending email, so call http://localhost:8080/auth from browser. 
+Endpoint to initiate authorization using OAuth 2.0. This endpoint will create credentials that would be used for sending email, so call http://localhost:8080/auth from browser. After calling this endpoint user will be redirected to '/' endpoint which is the redirection url. Credential would be saved in credential.json file on local system. 
 
 ### /sendemail
 Endpoint to send email which is created with GMAIL REST API. Send post request on this endpoint with body of shown format on http://localhost:8080/sendemail: \
@@ -18,6 +18,7 @@ Endpoint to send email which is created with GMAIL REST API. Send post request o
     "subject":"test mail ", \
     "message":"This is a test mail to check working" \
 }
+
 
 
 
